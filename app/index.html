@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrennote — private voice notes</title>
+<meta name="description" content="A notes app you can talk to and listen to. Dictate, hear notes read aloud and scan text — all on your phone, with nothing ever sent online.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg: #EAF1FF; --card: #FFFFFF; --ink: #23264A; --muted: #5D6285; --sun: #FFD23F; --mint: #8FE3C4; --coral: #FF8A7A; --blue: #5B74F5; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #16171D; --card: #23252E; --ink: #ECEBFA; --muted: #A7AACB; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header.hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; padding: 56px 0 40px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .brand img { width: 52px; height: 52px; border-radius: 13px; border: 2.5px solid #23264A; }
+  .brand span { font-weight: 900; font-size: 26px; letter-spacing: -0.5px; }
+  h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.05; letter-spacing: -1.5px; margin: 0 0 16px; font-weight: 900; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0 0 26px; max-width: 34ch; }
+  .badges { display: flex; flex-wrap: wrap; gap: 12px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 16px; border: 2.5px solid #23264A; background: var(--sun); color: #23264A; font-weight: 800; text-decoration: none; box-shadow: 0 4px 0 #23264A; }
+  .badge.soon { background: var(--card); color: var(--ink); border-color: var(--ink); box-shadow: 0 4px 0 var(--ink); }
+  .badge:active { transform: translateY(3px); box-shadow: 0 1px 0 #23264A; }
+  .hero-art { position: relative; justify-self: center; width: min(320px, 80vw); }
+  .hero-art img.phone { width: 100%; border-radius: 34px; border: 3px solid #23264A; box-shadow: 0 8px 0 #23264A; display: block; }
+  .wren { position: absolute; width: 130px; left: -118px; bottom: 120px; filter: drop-shadow(0 3px 0 rgba(0,0,0,.08)); }
+  section { padding: 28px 0; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .feature { background: var(--card); border: 2.5px solid var(--ink); border-radius: 20px; padding: 20px; box-shadow: 0 4px 0 var(--ink); }
+  .feature h2 { font-size: 21px; margin: 6px 0 6px; }
+  .feature p { margin: 0; color: var(--muted); font-size: 17px; }
+  .dot { width: 44px; height: 44px; border-radius: 999px; border: 2.5px solid var(--ink); display: grid; place-items: center; font-size: 22px; }
+  .private { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 32px; align-items: center; }
+  .private h2 { font-size: clamp(28px, 4vw, 40px); line-height: 1.1; letter-spacing: -1px; margin: 0 0 12px; }
+  .private ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  .private li { margin-bottom: 8px; }
+  .private img { width: 100%; max-width: 300px; justify-self: center; }
+  .private img, .gallery img { width: 100%; border-radius: 26px; border: 3px solid var(--ink); display: block; }
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .price { background: var(--card); border: 2.5px solid var(--ink); border-radius: 20px; padding: 22px; box-shadow: 0 4px 0 var(--ink); text-align: center; }
+  .price strong { font-size: 24px; }
+  footer { padding: 36px 0 56px; color: var(--muted); font-size: 15px; display: flex; flex-wrap: wrap; gap: 18px; }
+  footer a { color: inherit; }
+  @media (max-width: 760px) {
+    header.hero, .private { grid-template-columns: minmax(0, 1fr); }
+    .features, .gallery { grid-template-columns: minmax(0, 1fr); }
+    .hero-art { order: -1; }
+    .wren { width: 84px; left: -36px; bottom: 90px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="brand"><img src="icon.png" alt=""><span>Wrennote</span></div>
+      <h1>The notebook you can talk to and listen to.</h1>
+      <p class="lede">Dictate notes, hear them read aloud in a natural voice, and scan text with the camera. All on your phone. Nothing is ever sent online.</p>
+      <div class="badges">
+        <a class="badge" href="https://apps.apple.com/app/id6829580267">Download on the App Store</a>
+        <span class="badge soon">Google Play — coming soon</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img class="phone" src="read.webp" alt="Wrennote reading a note aloud, with the current sentence highlighted" width="600" height="1300">
+      <svg class="wren" viewBox="-270 -290 600 530" aria-hidden="true">
+<g stroke="#23264A" stroke-linejoin="round" stroke-linecap="round"><path d="M-20,150 L-35,215 M-35,215 L-70,222 M-35,215 L-5,226 M60,150 L55,215 M55,215 L20,222 M55,215 L88,226" fill="none" stroke-width="23.400000000000002"/><path d="M-120,-10 C-170,-80 -210,-160 -215,-240 C-216,-262 -190,-272 -175,-255 C-130,-200 -80,-120 -50,-60 Z" fill="#23264A" stroke-width="52"/><path d="M-150,40 C-170,-60 -90,-150 20,-160 C80,-200 190,-190 225,-100 C250,-40 230,40 180,95 C120,160 0,175 -70,150 C-120,135 -140,95 -150,40 Z" fill="#23264A" stroke-width="52"/><path d="M215,-110 L300,-92 L218,-72 Z" fill="#23264A" stroke-width="52"/></g>
+<path d="M-120,-10 C-170,-80 -210,-160 -215,-240 C-216,-262 -190,-272 -175,-255 C-130,-200 -80,-120 -50,-60 Z" fill="#8A5230"/><path d="M-180,-235 L-150,-200 M-165,-180 L-128,-150 M-140,-125 L-105,-100" stroke="#23264A" stroke-width="14.3" stroke-linecap="round"/>
+<path d="M-150,40 C-170,-60 -90,-150 20,-160 C80,-200 190,-190 225,-100 C250,-40 230,40 180,95 C120,160 0,175 -70,150 C-120,135 -140,95 -150,40 Z" fill="#B8743F"/><path d="M-40,148 C60,170 170,120 205,40 C222,0 215,-30 200,-45 C190,20 120,70 30,80 C-30,86 -70,120 -40,148 Z" fill="#F2D3A6"/><path d="M215,-110 L300,-92 L218,-72 Z" fill="#23264A"/>
+<path d="M-110,10 C-90,-60 -10,-80 50,-40 C80,-15 70,40 20,70 C-30,95 -100,75 -110,10 Z" fill="#8A5230" stroke="#23264A" stroke-width="20.8" stroke-linejoin="round"/>
+<path d="M-70,-10 L-20,20 M-60,40 L-10,60 M-20,-40 L30,-5" stroke="#23264A" stroke-width="13" stroke-linecap="round"/>
+<path d="M70,-150 C110,-175 175,-170 205,-140" fill="none" stroke="#FFF3DC" stroke-width="23.400000000000002" stroke-linecap="round"/>
+<ellipse cx="185" cy="-55" rx="26" ry="17" fill="#FF8A7A" opacity="0.9"/><circle cx="150" cy="-105" r="34" fill="#fff" stroke="#23264A" stroke-width="15.6"/>
+<circle cx="160" cy="-103" r="19" fill="#23264A"/><circle cx="166" cy="-110" r="7" fill="#fff"/></svg>
+    </div>
+  </header>
+
+  <section class="features" aria-label="What Wrennote does">
+    <div class="feature"><div class="dot" style="background:var(--sun)">🎙</div><h2>Talk instead of typing</h2><p>Speak for a sentence or for minutes. Punctuation and capitals appear by themselves, and filler words like “um” are tidied away without changing what you said.</p></div>
+    <div class="feature"><div class="dot" style="background:var(--mint)">▶</div><h2>Listen to any note</h2><p>A natural voice reads your notes back. Pick a voice, change the speed, tap a sentence to jump there. Prices, links and numbers read the way a person says them.</p></div>
+    <div class="feature"><div class="dot" style="background:var(--coral)">📷</div><h2>Scan text from a page</h2><p>Frame the paragraph you want, pinch to zoom, and the words drop into your note, ready to edit or hear.</p></div>
+  </section>
+
+  <section class="private">
+    <img src="privacy.webp" alt="Wrennote's privacy screen: no internet, notes stay on this phone, AI runs on your phone, no cloud backup" width="600" height="1300">
+    <div>
+      <h2>Private because it can't go online.</h2>
+      <ul>
+        <li>Speech recognition, voices and photo reading run on your phone, even in airplane mode.</li>
+        <li>Recordings and photos are never saved. Only the notes you keep are stored, on your phone.</li>
+        <li>No accounts, no ads, no tracking, no cloud backup of your notes.</li>
+        <li>Back up your notes to a file whenever you like, free.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="More screens">
+    <img src="notes.webp" alt="The notes list with search, back up and restore" width="600" height="1300" loading="lazy">
+    <img src="themes.webp" alt="Colour themes, fonts and text sizes" width="600" height="1300" loading="lazy">
+    <img src="read.webp" alt="Reading a note aloud" width="600" height="1300" loading="lazy">
+  </section>
+
+  <section>
+    <div class="price"><strong>Free for 7 days. Then $2.99, once.</strong><br>No subscription. Your notes stay on your phone either way.</div>
+  </section>
+
+  <footer>
+    <span>© 2026 Sachin Agrawal</span>
+    <a href="../">Privacy policy</a>
+    <a href="../support.html">Support</a>
+    <a href="mailto:wrennote.app@gmail.com">wrennote.app@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
