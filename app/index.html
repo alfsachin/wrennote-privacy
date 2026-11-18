@@ -10,6 +10,7 @@
   :root { --bg: #EAF1FF; --card: #FFFFFF; --ink: #23264A; --muted: #5D6285; --sun: #FFD23F; --mint: #8FE3C4; --coral: #FF8A7A; --blue: #5B74F5; }
   @media (prefers-color-scheme: dark) { :root { --bg: #16171D; --card: #23252E; --ink: #ECEBFA; --muted: #A7AACB; } }
   * { box-sizing: border-box; }
+  img { height: auto; } /* keep each picture's real shape (the height attribute alone squeezes it) */
   body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
   header.hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; padding: 56px 0 40px; }
