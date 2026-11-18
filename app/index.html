@@ -19,7 +19,8 @@
   .brand span { font-weight: 900; font-size: 26px; letter-spacing: -0.5px; }
   h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.05; letter-spacing: -1.5px; margin: 0 0 16px; font-weight: 900; }
   .lede { font-size: 20px; color: var(--muted); margin: 0 0 26px; max-width: 34ch; }
-  .badges { display: flex; flex-wrap: wrap; gap: 12px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .store img { display: block; height: 50px; width: auto; } /* Apple's official badge, unaltered */
   .badge { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 16px; border: 2.5px solid #23264A; background: var(--sun); color: #23264A; font-weight: 800; text-decoration: none; box-shadow: 0 4px 0 #23264A; }
   .badge.soon { background: var(--card); color: var(--ink); border-color: var(--ink); box-shadow: 0 4px 0 var(--ink); }
   .badge:active { transform: translateY(3px); box-shadow: 0 1px 0 #23264A; }
@@ -59,7 +60,7 @@
       <h1>The notebook you can talk to and listen to.</h1>
       <p class="lede">Dictate notes, hear them read aloud in a natural voice, and scan text with the camera. All on your phone. Nothing is ever sent online.</p>
       <div class="badges">
-        <a class="badge" href="https://apps.apple.com/app/id6829580267">Download on the App Store</a>
+        <a class="store" href="https://apps.apple.com/app/id6829580267"><img src="app-store.svg" alt="Download on the App Store" width="150" height="50"></a>
         <span class="badge soon">Google Play — coming soon</span>
       </div>
     </div>
@@ -103,7 +104,7 @@
   </section>
 
   <section>
-    <div class="price"><strong>Free for 7 days. Then $2.99, once.</strong><br>No subscription. Your notes stay on your phone either way.</div>
+    <div class="price"><strong>Free for 7 days. Then a one-time unlock.</strong><br>No subscription. Your notes stay on your phone either way.</div>
   </section>
 
   <footer>
