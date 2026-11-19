@@ -43,6 +43,9 @@
   var android = document.getElementById('android');
   var soon = document.getElementById('soon');
   if (!PLAY_LIVE) { android.hidden = true; soon.hidden = false; }
+  // ?ct=campaign-name (e.g. from an ad) is passed on to Apple's App Analytics campaign tracking.
+  var ct = (new URLSearchParams(location.search).get('ct') || '').replace(/[^\w-]/g, '').slice(0, 40);
+  if (ct) document.getElementById('ios').href = 'https://apps.apple.com/app/apple-store/id6829580267?pt=431076&ct=' + ct + '&mt=8';
   if (isIOS) {
     location.replace(document.getElementById('ios').href);
   } else if (isAndroid && PLAY_LIVE) {
