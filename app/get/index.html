@@ -18,7 +18,8 @@
   p { color: var(--muted); margin: 0 0 22px; }
   .badge { display: block; margin: 12px 0; padding: 14px 18px; border-radius: 16px; border: 2.5px solid #23264A; background: var(--sun); color: #23264A; font-weight: 800; text-decoration: none; box-shadow: 0 4px 0 #23264A; }
   .store { display: block; margin: 12px auto; width: fit-content; }
-  .store img { display: block; height: 54px; width: auto; }
+  .store img { display: block; height: 54px; width: auto; border: 0; border-radius: 0; }
+  .store img.play { height: 79px; margin: -13px; } /* Google's official badge, unaltered; negative margin cancels its built-in clear space */
   .badge.soon { background: var(--card); color: var(--ink); border-color: var(--ink); box-shadow: 0 4px 0 var(--ink); }
 </style>
 </head>
@@ -29,7 +30,7 @@
   <p id="msg">Private voice notes. Pick your phone.</p>
   <div id="links">
     <a class="store" id="ios" href="https://apps.apple.com/app/id6829580267"><img src="../app-store.svg" alt="Download on the App Store" width="162" height="54"></a>
-    <a class="badge" id="android" href="https://play.google.com/store/apps/details?id=com.wrennote.app">Get it on Google Play</a>
+    <a class="store" id="android" href="https://play.google.com/store/apps/details?id=com.wrennote.app"><img class="play" src="../google-play.png" alt="Get it on Google Play" width="204" height="79"></a>
     <span class="badge soon" id="soon" hidden>Google Play: coming soon</span>
   </div>
   <p style="margin-top:22px"><a href="../" style="color:inherit">About Wrennote</a></p>

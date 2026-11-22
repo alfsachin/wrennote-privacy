@@ -21,8 +21,7 @@
   .lede { font-size: 20px; color: var(--muted); margin: 0 0 26px; max-width: 34ch; }
   .badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
   .store img { display: block; height: 50px; width: auto; } /* Apple's official badge, unaltered */
-  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 16px; border: 2.5px solid #23264A; background: var(--sun); color: #23264A; font-weight: 800; text-decoration: none; box-shadow: 0 4px 0 #23264A; }
-  .badge:active { transform: translateY(3px); box-shadow: 0 1px 0 #23264A; }
+  .store img.play { height: 74px; margin: -12px; } /* Google's official badge, unaltered; its built-in clear space is cancelled by the negative margin */
   .hero-art { position: relative; justify-self: center; width: min(320px, 80vw); }
   .hero-art img.phone { width: 100%; border-radius: 34px; border: 3px solid #23264A; box-shadow: 0 8px 0 #23264A; display: block; }
   .wren { position: absolute; width: 130px; left: -118px; bottom: 120px; filter: drop-shadow(0 3px 0 rgba(0,0,0,.08)); }
@@ -60,7 +59,7 @@
       <p class="lede">Dictate notes, hear them read aloud in a natural voice, and scan text with the camera. All on your phone. Nothing is ever sent online.</p>
       <div class="badges">
         <a class="store" href="https://apps.apple.com/app/id6829580267"><img src="app-store.svg" alt="Download on the App Store" width="150" height="50"></a>
-        <a class="badge" href="https://play.google.com/store/apps/details?id=com.wrennote.app">Get it on Google Play</a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.wrennote.app"><img class="play" src="google-play.png" alt="Get it on Google Play" width="191" height="74"></a>
       </div>
     </div>
     <div class="hero-art">
@@ -111,6 +110,7 @@
     <a href="../">Privacy policy</a>
     <a href="../support.html">Support</a>
     <a href="mailto:wrennote.app@gmail.com">wrennote.app@gmail.com</a>
+    <span>Google Play and the Google Play logo are trademarks of Google LLC.</span>
   </footer>
 </div>
 </body>
