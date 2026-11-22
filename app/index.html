@@ -22,7 +22,6 @@
   .badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
   .store img { display: block; height: 50px; width: auto; } /* Apple's official badge, unaltered */
   .badge { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 16px; border: 2.5px solid #23264A; background: var(--sun); color: #23264A; font-weight: 800; text-decoration: none; box-shadow: 0 4px 0 #23264A; }
-  .badge.soon { background: var(--card); color: var(--ink); border-color: var(--ink); box-shadow: 0 4px 0 var(--ink); }
   .badge:active { transform: translateY(3px); box-shadow: 0 1px 0 #23264A; }
   .hero-art { position: relative; justify-self: center; width: min(320px, 80vw); }
   .hero-art img.phone { width: 100%; border-radius: 34px; border: 3px solid #23264A; box-shadow: 0 8px 0 #23264A; display: block; }
@@ -61,7 +60,7 @@
       <p class="lede">Dictate notes, hear them read aloud in a natural voice, and scan text with the camera. All on your phone. Nothing is ever sent online.</p>
       <div class="badges">
         <a class="store" href="https://apps.apple.com/app/id6829580267"><img src="app-store.svg" alt="Download on the App Store" width="150" height="50"></a>
-        <span class="badge soon">Google Play — coming soon</span>
+        <a class="badge" href="https://play.google.com/store/apps/details?id=com.wrennote.app">Get it on Google Play</a>
       </div>
     </div>
     <div class="hero-art">
